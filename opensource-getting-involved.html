@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Getting Involved in Open Source: Responsible Users and Effective Contributors</title>
+
+		<meta name="description" content="Getting Involved in Open Source: Responsible Users and Effective Contributors">
+		<meta name="author" content="Brett Meyer">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Getting Involved in Open Source</h1>
+					<h2>Responsible Users and Effective Contributors</h2>
+				</section>
+
+				<section>
+					<h2>Brett Meyer</h2>
+					<ul>
+						<li>Project Lead: Artificer</li>
+            <li>Committer and Core Dev: Hibernate ORM</li>
+            <li>Contributor: Apache Camel, Ininispan, and several JBoss projects</li>
+						<li>Senior Software Engineer, Red Hat</li>
+            <li>Owner/Consultant, <a href="http://www.3riverdev.com" target="_blank">3River Development LLC</a></li>
+						<li><a href="http://twitter.com/brettemeyer" target="_blank">@brettemeyer</a></li>
+					</ul>
+				</section>
+
+        <section>
+          <h2>Talk Rules</h2>
+          <ul>
+            <li>There are none</li>
+            <li>Open discussion</li>
+            <li>Interrupt me</li>
+          </ul>
+          <p><img src="images/norules.gif"/></p>
+          <p>(Ok, maybe there are a couple of rules...)</p>
+        </section>
+
+        <section>
+          <section>
+            <h1>Open Source Overview</h1>
+          </section>
+          <section>
+            <h2>Proprietary Software</h2>
+            <ul>
+              <li>Not much to discuss...</li>
+              <li>Black box</li>
+              <li>Closed-off development process</li>
+              <li>Exclusive control</li>
+              <li>Car with its hood welded shut</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Proprietary Software == No Rights</h2>
+            <ul>
+              <li>Users must complain when something's broke</li>
+              <li>Cannot fix on your own</li>
+              <li>Cannot modify on your own</li>
+              <li>Restricted usage</li>
+              <li>Frequently, don't even own it</li>
+              <li>Company ceases? You're screwed</li>
+            </ul>
+          </section>
+          <section>
+            <p>Example: <a href="http://www.wired.com/2015/04/dmca-ownership-john-deere/" target="_blank">John Deere (Wired)</a></p>
+            <img src="images/johndeere.jpg"/>
+          </section>
+          <section>
+            <h2>Open Source</h2>
+            <ul>
+              <li>No black box</li>
+              <li>Source code is publicly viewable</li>
+              <li>Does <em>not</em> explicitly grant:
+                <ul>
+                  <li>Ownership</li>
+                  <li>Modification rights</li>
+                  <li>Redistribution rights</li>
+                </ul>
+              </li>
+              <li><em>Not</em> implicitly free of cost</li>
+              <li><em>Not</em> implicitly "open" development processes</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Open Development</h2>
+            <ul>
+              <li>Transparency</li>
+              <li>Open processes</li>
+              <li>Open discussions (mailing list, forums, etc.)</li>
+              <li><em>Not</em> implicitly open source</li>
+            </ul>
+          </section>
+          <section>
+            <h2>"Free" Software</h2>
+            <ul>
+              <li>Open source, plus...</li>
+              <li>Free as in speech (freedom), not as in beer</li>
+              <li><em>Still not</em> implicitly free of cost</li>
+              <li>Freedoms:
+                <ul>
+                  <li><em>Run</em> for any purpose</li>
+                  <li><em>Study</em> the code</li>
+                  <li><em>Redistribute</em> copies</li>
+                  <li><em>Improve</em> the code</li>
+                </ul>
+              </li>
+              <li>Freedoms tweaked by license differences (whole other talk)</li>
+              <li>Typically (<em>hopefully</em>) includes "open development"...</li>
+              <li>...but not always (at least not always done <em>well</em>)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>FLOSS Software</h2>
+            <ul>
+              <li>Good: FOSS ("Free Open Source Software")</li>
+              <li>Best: FLOSS ("Free/Libre Open Source Software")</li>
+              <li>FLOSS emphasizes "freedom" over misleading "free"</li>
+              <li>Talk assumes FLOSS over OS...</li>
+            </ul>
+          </section>
+          <section>
+            <h2>FLOSS Religion</h2>
+            <img src="images/stallman.jpg"/>
+          </section>
+          <section>
+            <h2>FLOSS Religion</h2>
+            <ul>
+              <li>Not Free == Not Ethical</li>
+              <li>Appreciate the mentality, but...</li>
+              <li>IMO
+                <ul>
+                  <li>FLOSS == superior engineering</li>
+                  <li>Proprietary != The Devil</li>
+                  <li>No Ownership == The Devil</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>FLOSS Superiority</h2>
+            <ul>
+              <li>Control & ownership</li>
+              <li>Superior engineering
+                <ul>
+                  <li>More eyes == less bugs</li>
+                  <li>More eyes == stability</li>
+                  <li>More eyes == security</li>
+                  <li>Community == new features</li>
+                  <li>Breadth of features (ex: <a href="http://camel.apache.org/components.html" target="_blank">Apache Camel</a>)</li>
+                </ul>
+              </li>
+              <li>Speed (ie, not waiting for a fix)</li>
+            </ul>
+          </section>
+          <section>
+            <h2>"The Open Source Way"</h2>
+            <ul>
+              <li>Not limited to software</li>
+              <li>Openness, collaboration, transparent communication</li>
+              <li>Meritocracy (best ideas win)</li>
+              <li>Community service</li>
+              <li><a href="http://opensource.com/" target="_blank">opensource.com</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Open Source Your Projects</h2>
+            <ul>
+              <li>Obvious: beneficial to the software community</li>
+              <li>Rarely detrimental to your competitive edge</li>
+              <li>Again: superior engineering</li>
+              <li>Again: potential new features</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Why should I get involved?</h2>
+            <ul>
+              <li>Necessity</li>
+              <li>Community</li>
+              <li>Increased opportunities (both individually and for the company)</li>
+              <li>Better understanding of the specific tool</li>
+              <li>Professional network</li>
+              <li>Resume & personal brand</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>FLOSS Users</h1>
+          </section>
+          <section>
+            <h2>Proprietary Software Users</h2>
+            <ul>
+              <li>Purely a customer/consumer</li>
+              <li>No control</li>
+              <li>Request and wait on fixes/features</li>
+            </ul>
+          </section>
+          <section>
+            <h2>"Bad" FLOSS Users</h2>
+              <ul>
+                <li>Continue to act like proprietary users</li>
+                <li>"WHY HASN’T THIS BEEN FIXED YET?!"</li>
+                <li>"<em>YOU</em> need to fix this!"</li>
+                <li>Threaten to use a different project</li>
+                <li>Talker, not "doer"</li>
+                <li>Encounter bug -> abandon or workaround</li>
+              </ul>
+          </section>
+          <section>
+            <h2>"Bad" FLOSS Users: Bug Reports</h2>
+            <ul>
+              <li>"It doesn't work."</li>
+              <li>"I don't have time to create a test case."</li>
+              <li>"Here's my entire application, zipped up."</li>
+              <li>"I know this was rejected before, but opening again."</li>
+              <li>"Bump."</li>
+              <li>"I know this branch is 10 years old and not maintained, but fix this and release?"</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Effective FLOSS Users</h2>
+            <ul>
+              <li>Entirely different mentality</li>
+              <li><strike>Customer/Consumer</strike></li>
+              <li><em>Contributor</em>, not user</li>
+              <li>Vital part of the <em>development process</em></li>
+              <li>Everyone has different priorities...</li>
+              <li>...and yours may not be mine</li>
+              <li>Willing to discuss and be open</li>
+              <li>Simple issues -> immediately fix and contribute</li>
+              <li>Lighten up</li>
+              <li>Finish what you start</li>
+              <li>Appreciate it?  Tell us!  Goes a long way.</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Effective FLOSS Users: Bug Reports</h2>
+            <ul>
+              <li>Encounter bug -> don't ignore it (responsibility)</li>
+              <li>Search before opening</li>
+              <li>Verbose, but precise</li>
+              <li>Logs, stacks, thread dumps</li>
+              <li>Clearly separate facts vs. speculations</li>
+              <li>Study the code</li>
+              <li><a href="https://hibernate.atlassian.net/browse/HHH-8765" target="_blank">https://hibernate.atlassian.net/browse/HHH-8765</a></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Effective FLOSS Users: Bug Reports</h2>
+            <ul>
+              <li>Test cases are king!!!</li>
+              <li>Minimum: <em>Enough</em> code fragments and config details</li>
+              <li>Better: Small, standalone reproducer</li>
+              <li>Best: Pull request, adding test case to existing testsuite</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>How to Contribute</h1>
+          </section>
+          <section>
+            <img src="images/contribution-survey.png"/>
+            <p>(<a href="http://opensource.com/business/15/4/how-do-you-contribute-open-source-projects" target="_blank">http://opensource.com/business/15/4/how-do-you-contribute-open-source-projects</a>)</p>
+          </section>
+          <section>
+            <img src="images/notacoder.jpg"/>
+          </section>
+          <section>
+            <h2>Ways to Contribute</h2>
+            <ul>
+              <li>Code (of course)</li>
+              <li>Weigh in on discussions</li>
+              <li>Documentation
+                <ul>
+                  <li>VERY HELPFUL</li>
+                  <li>Often over-looked</li>
+                  <li>Again: Simple issues -> immediately fix and contribute</li>
+                </ul>
+              </li>
+              <li>Translation
+                <ul>
+                  <li>Most large-scale projects have internationalization support...</li>
+                  <li>...but very few languages</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Ways to Contribute</h2>
+            <ul>
+              <li>Marketing
+                <ul>
+                  <li>Social media</li>
+                  <li>Blogs</li>
+                  <li>Website and branding (frequently open source as well)</li>
+                  <li>Presentations</li>
+                  <li>Vital, but also over-looked</li>
+                  <li>Many teams simply don't have adequate time available</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Ways to Contribute</h2>
+            <ul>
+              <li>Testing
+                <ul>
+                  <li>For large projects, single most helpful thing you can do</li>
+                  <li>Attempt to reproduce/analyze bug reports</li>
+                  <li>Can't emphasize that enough</li>
+                  <li>Seriously</li>
+                  <li>Guys, seriously...</li>
+                  <li>Hibernate has 2000+ open issues</li>
+                  <li>(Please send help...)</li>
+                  <li>Test alpha/beta releases (and provide <em>good</em> bug reports)</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Ways to Contribute</h2>
+            <ul>
+              <li>Support
+                <ul>
+                  <li>User forums</li>
+                  <li>Mailing lists</li>
+                  <li>Chat</li>
+                  <li>StackOverflow</li>
+                  <li>Again: Limited time available</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Ways to Contribute</h2>
+            <ul>
+              <li>Most importantly: Be a good and responsible user!</li>
+              <li>FLOSS does <em>not</em> work without it</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h1>Discover Projects to Help</h1>
+          </section>
+          <section>
+            <h2>Discover Projects to Help</h2>
+            <ul>
+              <li>Most important: You use it (@ work, on-the-side)</li>
+              <li>Scratches an itch</li>
+              <li>Need a capability
+                <ul>
+                  <li>Could do it from scratch...</li>
+                  <li>...but Project X is close (missing a few things)</li>
+                  <li>Add to it!</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h2>Discover Projects to Help</h2>
+            <ul>
+              <li>Not unlike startups: requires passion to be effective</li>
+              <li>Community driven: What would be the most <em>enabling</em>?</li>
+              <li>Humanitarian Free and Open Source Software (HFOSS)
+                <ul>
+                  <li>Lots of momentum</li>
+                  <li>Large number of efforts</li>
+                  <li>Whole new level of <em>passion</em></li>
+                  <li><a href="http://opensource.com/life/15/2/getting-involved-hfoss" target="_blank">http://opensource.com/life/15/2/getting-involved-hfoss</a></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <img src="images/thatsallfolks.gif"/>
+        </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
